@@ -23,10 +23,19 @@ class Cat:
         self.energy +=50
         print(f"{self.name} is sleeping")
 
-        if self.hunger >= 10 or self.happiness <= 0:
-            self.is_alive = False
 
-    def __str__(self):
-        return f"{self.name}: mood {self.mood}, hunger {self.hunger}, energy {self.energy}"
+
 
 cat = Cat("myay")
+for day in range(1, 31):
+
+ action = random.choice(["eat", "play", "sleep"])
+
+if action == "eat":
+    cat.eat()
+elif action == "play":
+    cat.play()
+else:
+    cat.sleep()
+
+
